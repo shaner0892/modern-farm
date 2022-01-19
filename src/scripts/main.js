@@ -42,3 +42,8 @@ console.log(addedPlants)
 import { usePlants } from "./field.js"
 const usedPlants = usePlants()
 console.log(usedPlants)
+
+
+import { plantSeeds } from './tractor.js'
+const plantedSeeds = plantSeeds(plantsArray)
+console.log(plantedSeeds)
