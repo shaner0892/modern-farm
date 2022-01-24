@@ -1,17 +1,16 @@
-//function will return a plant based on how many each plant outputs
+//function will return a plant based on how many each plant harvests/outputs, accepts plant array as its one parameter
 export const harvestPlants = (plantArrayInput) => {
-    const seedsArray = []
+    const harvestedArray = []
     for (const plant of plantArrayInput) {
-       //need to figure out isArray method to check for corn array
-        if (plant.type === "corn") {
+        if (plant.type === "Corn") {
             for (let i = 0; i < plant.output / 2; i++) 
-                seedsArray.push(plant)
+                harvestedArray.push(plant)
         }
         else {
-            for (let i = 0; i < plant.output / 2; i++) {
-            seedsArray.push(plant)
+            for (let i = 0; i < plant.output; i++) {
+                harvestedArray.push(plant)
             }
+        }
     }
-    return seedsArray
-}
+    return harvestedArray
 }

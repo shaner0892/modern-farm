@@ -1,9 +1,13 @@
 console.log("Welcome to the main module")
+
+//below you are importing functions from other modules and then invoking
+
+//this function creates the yearly plan which is 3 arrays of 6
 import { createPlan } from './plan.js'
 const yearlyPlan = createPlan()
 console.log(yearlyPlan)
 
-// here you are importing functions from other modules, then invoking
+
 import { createAsparagus } from "./seeds/asparagus.js"
 const asparagusSeed = createAsparagus()
 // console.log(asparagusSeed)
@@ -34,19 +38,29 @@ const cornSeed = createCorn()
 // console.log(cornSeed)
 
 
-// import { plantsArray } from './field.js'
+//this function iterates through two arrays, takes the planting plan as its one parameter
+//it checks the plant type & uses the addPlant function to add it to the plantsArray
+import { plantSeeds } from './tractor.js'
+const plantedSeeds = plantSeeds(yearlyPlan)
+console.log(plantedSeeds)
 
 
+//adds seeds to the field/plantsArray, takes one parameter
 import { addPlant } from "./field.js"
-const addedPlants = addPlant(sunflowerSeed)
+const addedPlants = addPlant(plantedSeeds)
 console.log(addedPlants)
 
-
+//creates a map/copy of the plantsArray, no parameters
 import { usePlants } from "./field.js"
 const usedPlants = usePlants()
 console.log(usedPlants)
 
-//not sure what to enter as the parameter, plants array does not work
-import { plantSeeds } from './tractor.js'
-const plantedSeeds = plantSeeds(yearlyPlan)
-console.log(plantedSeeds)
+//returns the output of each planted plant, accepts plantsArray copy as parameter
+import { harvestPlants } from './harvester.js'
+const harvestedPlants = harvestPlants(usedPlants)
+console.log(harvestedPlants)
+
+//this function iterates the food array and displays the harvested foods in a grid layout, takes the harvestedArray as parameter
+import { catalog } from './catalog.js'
+const seedCatalog = catalog(harvestedPlants)
+console.log(seedCatalog)

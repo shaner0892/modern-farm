@@ -1,6 +1,7 @@
+//this function creates a potato and assigns it properties
 export const createPotato = () => {
     const seedObj = {
-        type: "potato",
+        type: "Potato",
         height: 32,
         output: 2
     }

@@ -1,6 +1,7 @@
+//this function creates wheat and assigns it properties
 export const createWheat = () => {
     const seedObj = {
-        type: "wheat",
+        type: "Wheat",
         height: 230,
         output: 6
     }

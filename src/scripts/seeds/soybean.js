@@ -1,6 +1,7 @@
+//this function creates a soybean and assigns it properties
 export const createSoybean = () => {
     const seedObj = {
-        type: "soybean",
+        type: "Soybean",
         height: 20,
         output: 4
     }
